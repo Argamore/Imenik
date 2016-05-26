@@ -30,7 +30,7 @@ public class CreateUserServlet extends HttpServlet {
 			UserBoImp bo = new UserBoImp();
 
 			if (bo.createUser(user)) {
-				request.getRequestDispatcher("login.jsp").forward(request, response);
+				request.getRequestDispatcher("index.jsp").forward(request, response);
 				return; // end the execution of the doPost
 				
 			} else {

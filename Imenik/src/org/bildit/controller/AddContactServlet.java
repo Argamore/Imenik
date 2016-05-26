@@ -38,10 +38,10 @@ public class AddContactServlet extends HttpServlet {
 		if (bo.createContact(contact, user.getId())) {
 			request.getSession().setAttribute("user", user);
 			request.setAttribute("name", name);
-			request.getRequestDispatcher("contactadded.jsp").forward(request, response);
+			request.getRequestDispatcher("home.jsp").forward(request, response);
 		} else {
 			request.getSession().setAttribute("user", user);
-			request.getRequestDispatcher("contactnotadded.jsp").forward(request, response);
+			request.getRequestDispatcher("home.jsp").forward(request, response);
 		}
 
 	}

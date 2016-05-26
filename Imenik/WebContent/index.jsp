@@ -93,6 +93,6 @@
 					<img src="images/picbild.jpg"></img></a>
 					</div>
 			</section>
-		<jsp:include page="assets/headfoot/footer.jsp"></jsp:include>
+		<jsp:include page="assets/footer.jsp"></jsp:include>
 </body>
 </html>

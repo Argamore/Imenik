@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
 			user = bo.readUser(username, password);
 
 			if (user == null) {
-				request.getRequestDispatcher("login.jsp").forward(request, response);
+				request.getRequestDispatcher("index.jsp").forward(request, response);
 				return; // end the execution of the doPost
 			}
 
@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
 			return; // end the execution of the doPost
 
 		} else {
-			request.getRequestDispatcher("login.jsp").forward(request, response);
+			request.getRequestDispatcher("index.jsp").forward(request, response);
 		}
 	}
 }
