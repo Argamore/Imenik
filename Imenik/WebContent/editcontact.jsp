@@ -1,26 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>eeMenik | Home</title>
+<title>eeMenik | Kontakt lista</title>
+ <jsp:include page="header.jsp"></jsp:include>
     <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
 <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
 <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
 
  </head>
- <jsp:include page="header.jsp"></jsp:include>
  <body>
+<body>
 <div class="container">
 
-    <form class="well form-horizontal" action="addContact" method="post"  id="contact_form">
+    <form class="well form-horizontal" action="edit" method="post">
 <fieldset>
 
 <!-- Form Name -->
-<legend>Dodaj kontakt</legend>
+<legend>Uredi kontakt</legend>
 
 <!-- Text input-->
 
@@ -29,7 +30,8 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="name" placeholder="Ime" class="form-control"  type="text">
+  <input type="text" class="form-control" id="name" name="name"
+						value="${contact.name }" />
     </div>
   </div>
 </div>
@@ -41,7 +43,8 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="lastname" placeholder="Prezime" class="form-control"  type="text">
+  <input type="text" class="form-control" id="lastname"
+						name="lastname" value="${contact.lastname}">
     </div>
   </div>
 </div>
@@ -52,7 +55,8 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-  <input name="email" placeholder="E-Mail" class="form-control"  type="text">
+  <input type="email" class="form-control" id="email" name="email"
+						value="${contact.email}">
     </div>
   </div>
 </div>
@@ -65,7 +69,8 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="phone" placeholder="0038761234567" class="form-control" type="text">
+  <input type="text" class="form-control" id="phone" name="phone"
+						value="${contact.phone}">
     </div>
   </div>
 </div>
@@ -88,10 +93,5 @@
 </fieldset>
 </form>
 </div>
- </body>
- 
-     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
-
-        <script src="js/index.js"></script>
+</body>
+</html>

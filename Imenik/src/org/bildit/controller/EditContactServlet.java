@@ -50,10 +50,10 @@ public class EditContactServlet extends HttpServlet {
 		contact.setPhone(phone);
 
 		if (bo.updateContact(contact)) {
-			request.getRequestDispatcher("contactedited.jsp").forward(request, response);
+			request.getRequestDispatcher("listcontacts.jsp").forward(request, response);
 		}
 		else {
-			request.getRequestDispatcher("contactnotedited.jsp").forward(request, response);
+			request.getRequestDispatcher("listcontacts.jsp").forward(request, response);
 
 		}
 

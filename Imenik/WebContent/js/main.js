@@ -1,3 +1,12 @@
+function register(showhide){
+if(showhide == "show"){
+    document.getElementById('popupboxreg').style.visibility="visible";
+}else if(showhide == "hide"){
+    document.getElementById('popupboxreg').style.visibility="hidden"; 
+}
+}
+
+
 function login(showhide){
 if(showhide == "show"){
     document.getElementById('popupbox').style.visibility="visible";

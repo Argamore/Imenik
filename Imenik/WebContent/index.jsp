@@ -6,13 +6,14 @@
 		<title>eeMenik</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!-- <link rel="stylesheet" href="assets/css/bootstrap.css" /> -->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="css/main.css" />
+		<!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
 </head>
 	<body id="top">
+	<!-- LOGIN BOX -->
 	<div id="popupbox"> 
 		<form name="login" id="login" action="login" method="post">
 		Username:
@@ -21,6 +22,17 @@
 		<input name="password" type="password" size="14" /><br></br>
 		<input type="submit" name="submit" class="button special" value="PRIJAVA"/><br></br>
 		<a href="javascript:login('hide');" class="button">ZATVORI</a>
+		</form>
+	</div> 
+<!-- REGISTER BOX -->
+	<div id="popupboxreg"> 
+		<form name="register" id="register" action="create" method="post">
+		Username:
+		<input name="username" type="text" size="14" />
+		Password:
+		<input name="password" type="password" size="14" /><br></br>
+		<input type="submit" name="submit" class="button special" value="REGISTRUJ ME"/><br></br>
+		<a href="javascript:register('hide');" class="button">ZATVORI</a>
 		</form>
 	</div> 
 
@@ -32,7 +44,7 @@
 					Design / Development: <a href="https://github.com/Argamore">Sefer "Argamore" Kuduzović</a></p>
 					<ul class="actions">
 						<li><a href="javascript:login('show');" class="button special icon fa-user">PRIJAVA</a></li>
-						<li><a href="#" class="button icon fa-user-plus">REGISTRACIJA</a></li>
+						<li><a href="javascript:register('show');" class="button icon fa-user-plus">REGISTRACIJA</a></li>
 						<li><a href="#one" class="button icon fa-chevron-down scrolly">INFORMACIJE</a></li>
 					</ul>
 				</div>
@@ -93,6 +105,6 @@
 					<img src="images/picbild.jpg"></img></a>
 					</div>
 			</section>
-		<jsp:include page="assets/footer.jsp"></jsp:include>
+		<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
