@@ -16,7 +16,7 @@ import org.bildit.model.dto.User;
 /**
  * Servlet implementation class ListContactsServlet
  */
-@WebServlet("/listContacts")
+@WebServlet("/listcontacts")
 public class ListContactsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

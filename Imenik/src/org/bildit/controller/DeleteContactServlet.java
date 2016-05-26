@@ -41,7 +41,7 @@ public class DeleteContactServlet extends HttpServlet {
 		Contact contact = bo.readContact(id);
 
 		if (bo.deleteContact(contact)) {
-			request.getRequestDispatcher("contactdeleted.jsp").forward(request, response);
+			request.getRequestDispatcher("listcontacts.jsp").forward(request, response);
 		}
 
 	}
